@@ -1,0 +1,47 @@
+<section class="contact-all">
+    @let contacts = contactService.t_contact$();
+
+    <div class="contact-all-head">
+        <h3 class="contact-all-title">Liste des contacts</h3>
+        <input class="search-contact" type="search" name="search-contact" id="search-contact"
+            placeholder="Rechercher...">
+    </div>
+
+    <div class="div-contact-all-bottom">
+        <table class="div-listing">
+            <thead>
+                <tr class="list tr-head">
+                    <th class="td-1 td-index">n°</th>
+                    <th class="td-2 td-id">id</th>
+                    <th class="td-3 td-created">inscription</th>
+                    <th class="td-4 td-nom">nom</th>
+                    <th class="td-5 td-prenom">prenom</th>
+                    <th class="td-6 td-gsm">gsm</th>
+                    <th class="td-7 td-email">email</th>
+                </tr>
+            </thead>
+            <tbody class="ul-listing-contact">
+
+                @for(contact of contacts; track contact.id;
+                let idx = $index; let even = $even){
+
+                <tr class="btn list list-contact {{contact.id}}" (click)="selecteContact(contact)" id={{contact.id}}>
+
+                    <td class="td-1 td-index">{{idx +1}}</td>
+                    <td class="td-2 td-id">{{contact.id}}</td>
+                    <td class="td-3 td-created">{{contact.dateCreation}}</td>
+                    <td class="td-4 td-nom">{{contact.nom}}</td>
+                    <td class="td-5 td-prenom">{{contact.prenom}}</td>
+                    <td class="td-6 td-gsm">{{contact.gsm}}</td>
+                    <td class="td-7 td-email">{{contact.mail}}</td>
+
+                </tr>
+                }
+
+            </tbody>
+        </table>
+        <button class="btn1 btn-contact-new" (click)="createContact()">[ Creer Contact ]</button>
+    </div>
+
+
+</section>

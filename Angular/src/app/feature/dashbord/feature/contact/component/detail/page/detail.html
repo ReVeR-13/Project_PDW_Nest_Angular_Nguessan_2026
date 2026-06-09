@@ -1,0 +1,141 @@
+<section class="section-contact-detail">
+
+    <div class="div-detail-header">
+        <h3 class="contact-detail-title">Details</h3>
+        <div class="contact-detail-info-head">
+            <p class="info-head-id">ID: [ <span class="contact-id">
+
+                @if(contactService.contact$().isEmpty){
+                    --
+                }@else{
+                    {{contactService.contact$().id}}
+                }
+                
+            </span> ]</p>
+            <p class="info-head-created">Créé le: [ <span class="contact-created">
+                @if(contactService.contact$().isEmpty){
+                    --
+                }@else{
+                    {{contactService.contact$().dateCreation}}
+                }
+                
+            </span> ]</p>
+        </div>
+    </div>
+
+    <form class="div-detail-corps-bottom" name="create" [formGroup]="contactForm">
+
+        <div class="div-detail-corps">
+
+            <div class="div-detail-img">[ Image ]</div>
+
+            <div class="div-detail-form">
+
+                <section class="section-form section-1">
+
+                    <div class="div-input div-input-nom">
+                        <input class="input input-nom" type="text" name="input-nom" id="input-nom" 
+                        formControlName="nom" [class.invalid]="nom.invalid && nom.touched" required>
+
+                        <label class="label-input label-nom" for="input-nom">nom</label>
+                    </div>
+
+                    <div class="div-input div-input-prenom">
+                        <input class="input input-prenom" type="text" name="input-prenom" id="input-prenom" 
+                        formControlName="prenom" [class.invalid]="prenom.invalid && prenom.touched" required>
+                        <label class="label-input label-prenom" for="input-prenom">prenom</label>
+                    </div>
+
+                </section>
+
+                <section class="section-form section-2">
+
+                    <div class="div-input div-input-dten">
+                        <input class="input input-dten" type="date" name="input-dten" id="input-dten"
+                        formControlName="dateNaissance" [class.invalid]="dateNaissance.invalid && dateNaissance.touched">
+                        <label class="label-input label-dten" for="input-dten">date naissance</label>
+                    </div>
+
+                    <div class="div-input div-input-niss">
+                        <input class="input input-niss" type="text" name="input-niss" id="input-niss" 
+                        formControlName="niss" [class.invalid]="niss.invalid && niss.touched" required>
+                        
+                        <label class="label-input label-niss" for="input-niss">niss</label>
+                    </div>
+
+                </section>
+
+                <section class="section-form section-3">
+
+                    <div class="section-3-haut">
+
+                        <div class="div-input div-input-gsm">
+                            <input class="input input-gsm" type="tel" name="input-gsm" id="input-gsm" 
+                            formControlName="gsm" [class.invalid]="gsm.invalid && gsm.touched" required>
+                            <label class="label-input label-gsm" for="input-gsm">gsm</label>
+                        </div>
+
+                        <div class="div-input div-input-tel">
+                            <input class="input input-tel" type="tel" name="input-tel" id="input-tel" 
+                            formControlName="telephone" [class.invalid]="telephone.invalid && telephone.touched" required>
+                            <label class="label-input label-tel" for="input-tel">telephone</label>
+                        </div>
+
+                    </div>
+
+                    <div class="div-input div-input-mail">
+                        <input class="input input-mail" type="email" name="input-mail" id="input-mail" 
+                        formControlName="mail" [class.invalid]="mail.invalid && mail.touched" required>
+                        <label class="label-input label-mail" for="input-mail">e-mail</label>
+                    </div>
+
+                </section>
+
+                <section class="section-form section-4">
+
+                    <div class="section-4-haut">
+
+                        <div class="div-input div-input-localite">
+                            <input class="input input-localite" type="text" name="input-localite" id="input-localite" 
+                            formControlName="localite" [class.invalid]="localite.invalid && localite.touched" required>
+                            <label class="label-input label-localite" for="input-localite">localite</label>
+                        </div>
+
+                        <div class="div-input div-input-cp">
+                            <input class="input input-cp" type="text" name="input-cp" id="input-cp" 
+                            formControlName="codePostale" [class.invalid]="codePostale.invalid && codePostale.touched" required>
+                            <label class="label-input label-cp" for="input-cp">code postale</label>
+                        </div>
+
+                    </div>
+
+                    <div class="div-input div-input-adresse">
+                        <input class="input input-adresse" type="text" name="input-adresse" id="input-adresse" 
+                        formControlName="rue" [class.invalid]="rue.invalid && rue.touched" required>
+                        <label class="label-input label-adresse" for="input-adresse">adresse</label>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+
+        <div class="div-detail-bottom">
+            <button class="btn1 btn-valid" (click)="validation(contactService.contact$().id)" type="button">
+                @if(contactService.contact$().isEmpty){
+                    Creer
+                }@else{
+                    modifier
+                }
+                
+            </button>
+            <button class="btn1 btn-annuler" (click)="annuler()" type="button">annuler</button>
+
+            @if(!contactService.contact$().isEmpty){
+                <button class="btn1 btn-supprimer" (click)="supprimer(contactService.contact$().id)" type="button">supprimer</button>
+            }
+            
+        </div>
+    </form>
+
+</section>

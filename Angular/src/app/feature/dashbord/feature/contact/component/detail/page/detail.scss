@@ -1,0 +1,185 @@
+.section-contact-detail {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.div-detail-header {
+    width: 100%;
+    height: 10%;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(45deg, transparent, var(--color-vert-doux), transparent);
+}
+
+.contact-detail-info-head {
+    width: 60%;
+    height: 100%;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info-head-created,
+.info-head-id {
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-created,
+.contact-id{
+    width: max-content;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-bleu-accent);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-detail-title {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.div-detail-corps-bottom {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-detail-corps {
+    width: 85%;
+    height: 100%;
+    display: flex;
+}
+
+.div-detail-img {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: linear-gradient(45deg, var(--color-blanc), transparent);
+}
+
+.div-detail-form {
+    width: 70%;
+    height: 100%;
+    padding: 0 10px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.section-form {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-4,
+.section-3 {
+    width: 100%;
+    height: 80px;
+    gap: 10px;
+}
+
+.section-4-haut,
+.section-3-haut {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-input-adresse,
+.div-input-mail {
+    width: 100%;
+}
+
+.div-detail-bottom {
+    width: 15%;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-supprimer,
+.btn-annuler,
+.btn-valid {
+    width: 80%;
+    height: 40px;
+    background: var(--boutton-intern-vert);
+    color: darkgreen;
+}
+
+.btn-annuler {
+    background: var(--boutton-intern-jaune);
+    color: darkgoldenrod;
+}
+
+.btn-supprimer{
+    background: var(--boutton-intern-rouge);
+    color: red;
+}

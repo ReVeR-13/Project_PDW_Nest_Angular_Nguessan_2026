@@ -1,0 +1,64 @@
+
+.section-contact{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: var(--neumorph-panel);
+    background: linear-gradient(310deg, var(--color-gris-clair), transparent);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-contact-top{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-btn{
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.btn-contact{
+    width: 150px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: var( --boutton-intern-jaune);
+    color: var(--color-vert-milo);
+}
+
+.btn-contact-1{
+    width: 60px;
+    background: linear-gradient(45deg,var(--color-background),transparent);
+    color: var(--color-orange-chaleur);
+}
+
+.div-contact-bottom{
+    width: 100%;
+    height: 85%;
+    display: flex;
+}
