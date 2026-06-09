@@ -1,0 +1,60 @@
+<section class="auth-section signin-section">
+
+    <div class="auth-mid sign-in-mid" name="signin" [formGroup]="signInForm">
+
+        <div class="auth-div-input div-input-login">
+
+            <input class="auth-input input-login" type="email" formControlName="email"
+                [class.invalid]="email.invalid && email.touched" #login placeholder="example@hotmail.be">
+
+            <div class="error input-error">
+                @if(email.hasError('required')){
+                <span>{{errorMsg.Required}}</span>
+                }
+            </div>
+
+        </div>
+
+        <div class="auth-div-input div-input-pass">
+            <input class="auth-input input-password" type="password" formControlName="password" #password
+                placeholder="Entrez votre mod de passe">
+        </div>
+
+        <div class="auth-div-btn div-btn-connection">
+            <p class="zone-erreur">{{erreur$()}}</p>
+
+            <button class="btn1 auth-btn btn-connection" type="button" (click)="signIn()" [disabled]="signInForm.invalid">
+                @if(isSumit$()){
+                    Connect en cours...
+                }@else{
+                    Se connecter
+                }
+                
+            </button>
+        </div>
+
+        <div class="div-forgot-pass">
+            <span class="forgot-pass">Mot de passe oublié ?</span>
+        </div>
+
+    </div>
+
+    <div class="auth-bottom sign-in-bottom">
+
+        <p class="ou">Essayez aussi par...</p>
+
+        <div class="auth-div-autre div-btn-autre-connection">
+            <button class="btn btn-telephone" type="button">telephone</button>
+            <button class="btn btn-whatsapps" type="button">whatsapps</button>
+        </div>
+
+    </div>
+
+    <div class="div-to-sign-up">
+        <p class="sign-up-msg">Vous n'avez pas de compte ?</p>
+        <button class="to-sign-up" (click)="authComponent.toSignup()"> 
+            Inscrivez-vous ici
+        </button>
+    </div>
+
+</section>

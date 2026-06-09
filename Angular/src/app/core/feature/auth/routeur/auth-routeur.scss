@@ -1,0 +1,319 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.div-main-signin {
+    position: relative;
+    width: 500px;
+    height: 90vh;
+    margin-top: 5vh;
+    background:linear-gradient(46deg,var(--color-background),transparent) ;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--color-gris-clair);
+    border-radius: 26px;
+    overflow: hidden;
+
+    transition: transform 0.8s cubic-bezier(0.4, 0.32, 0.26, 1.43);
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+}
+
+.div-animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    border-radius: 70% 70% 0 0;
+    background-color: var(--color-vert-moyen);
+    z-index: -1;
+    transition: all 0.8s cubic-bezier(0.4, 0.32, 0.26, 1.43);
+}
+
+.div-animation.ouvert {
+    height: 100%;
+    border-radius: 0;
+    background: linear-gradient(98deg,var(--color-vert-moyen),transparent);
+    transition: all 0.8s cubic-bezier(0.4, 0.32, 0.26, 1.43);
+}
+
+.error {
+    width: 90%;
+    height: fit-content;
+    font-size: 1rem;
+    padding: 0 20px;
+    color: var(--color-vert-milo);
+}
+
+.sign-in-top {
+    width: 90%;
+    height: 30%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashbord-logo {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    background-color: var(--color-background);
+    box-shadow: var(--neumorph-panel);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+    fill: var(--color-blanc);
+    stroke: var(--color-blanc);
+}
+
+.dashbord-logo.dark{
+    background-color: var(--color-vert-moyen);
+    box-shadow: var(--neumorph-panel-green);
+    transition: all 0.3s ease-in-out 0.3s;
+
+    .logo{
+        fill: var(--color-vert-doux);
+        transition: all 0.3s ease-in-out 0.3s;
+    }
+}
+
+.div-title{
+    width: 100%;
+    height: max-content;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 90%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mid-outlet-sign-up,
+.mid-outlet-sign-in {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    visibility: visible;
+    transition: all 0.2s ease-in-out 0.1s;
+}
+
+.mid-outlet-sign-up {
+    height: 0;
+}
+
+.mid-outlet-sign-in.close {
+    height: 0;
+    transition: all 0.2s ease-in-out 0.1s;
+}
+
+.mid-outlet-sign-up.open {
+    height: 65%;
+    transition: all 0.2s ease-in-out 0.1s;
+}
+
+.connected {
+
+    .mid-outlet-sign-up,
+    .mid-outlet-sign-in {
+        visibility: hidden;
+        height: 0 !important;
+        transition: all 0.2s ease-in-out 0.1s;
+    }
+
+    .sign-in-top {
+        height: 50%;
+        transition: all 0.2s ease-in-out 0.2s;
+
+        .logo {
+            width: 60%;
+            height: 60%;
+            transition: all 0.2s cubic-bezier(0.4, 0.25, 0.66, 1.52) 0.2s;
+        }
+
+        .title {
+            text-transform: uppercase;
+            transform: scale(1.02);
+            color: var(--color-vert-moyen);
+        }
+    }
+
+
+
+
+}
+
+.connected.deja {
+
+    .mid-outlet-sign-up,
+    .mid-outlet-sign-in {
+        transition: none
+    }
+
+    .sign-in-top {
+        transition: none;
+
+        .logo {
+            transition: none;
+        }
+    }
+}
+
+.router-outlet {
+    width: 100%;
+}
+
+
+
+//----------------------------------------------------------------
+.auth-section {
+    position: relative;
+    width: 500px;
+    height: max-content;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-mid {
+    width: 100%;
+    height: 350px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-div-input {
+
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-input {
+    width: 90%;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    outline: none;
+    border: 1px solid var(--color-background);
+    transition: 0.1s border ease-in-out;
+}
+
+.auth-input:focus {
+    border: 2px solid var(--color-orange-chaleur);
+    transition: 0.1s border ease-in-out;
+}
+
+.auth-div-btn {
+    width: 90%;
+    height: 80px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-btn {
+    width: 90%;
+    height: 50px;
+    border: none;
+    color: var(--color-blanc);
+    border-radius: 16px;
+    background-color: var(--color-orange-chaleur);
+}
+
+.auth-bottom {
+    position: relative;
+    width: 90%;
+    gap: 10px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ou {
+    width: 100%;
+    height: fit-content;
+    color: var(--color-vert-doux);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-div-autre {
+    width: 90%;
+    height: max-content;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}

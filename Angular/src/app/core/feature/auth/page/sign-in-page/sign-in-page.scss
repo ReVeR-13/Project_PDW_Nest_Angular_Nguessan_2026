@@ -1,0 +1,87 @@
+
+
+.div-forgot-pass{
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot-pass{
+    font-style: italic;
+    color: var(--color-bleu-accent);
+    cursor: pointer;
+}
+
+.auth-bottom::before{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    width: 60%;
+    height: 1px;
+    background-color: var(--color-vert-milo);
+}
+
+.ou {
+    color: var(--color-vert-milo);
+}
+
+.btn-whatsapps,
+.btn-telephone{
+    width: 100px;
+    height: 24px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    background-color: var(--color-vert-milo);
+    color: var(--color-blanc);
+    transition: all 0.1s ease-in-out ;
+}
+
+.btn-whatsapps:hover,
+.btn-telephone:hover{
+    background-color: var(--color-blanc);
+    color: var(--color-vert-milo);
+    border: 1px solid var(--color-vert-milo);
+    transition: all 0.1s ease-in-out ;
+}
+
+.sign-up-msg{
+    width: 90%;
+    height: max-content;
+    margin: 20px 0 0 0;
+    color: var(--color-blanc);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-to-sign-up{
+    width: 90%;
+    height: max-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-sign-up{
+    background-color: var(--color-gris-clair);
+    color: var(--color-orange-chaleur);
+    font-size: 1.2rem;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+}

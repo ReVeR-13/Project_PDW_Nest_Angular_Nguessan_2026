@@ -1,0 +1,75 @@
+<section class="auth-section signup-section">
+
+    <div class="auth-mid sign-up-mid" name="signup" [formGroup]="signUpForm">
+
+        <div class="auth-div-input div-input-name">
+
+            <input class="auth-input input-name" type="text" formControlName="username"
+             #nom placeholder="Username">
+
+            <div class="error input-error">
+                @if(_username.hasError('required')){
+                    <span >{{errorMsg.Required}}</span>
+                }  
+            </div>
+
+        </div>
+
+        <div class="auth-div-input div-input-login">
+
+            <input class="auth-input input-login" type="email" formControlName="email"
+                 #login placeholder="example@hotmail.be">
+
+            <div class="error input-error">
+                @if(_email.hasError('required')){
+                    <span>{{errorMsg.Required}}</span>
+                }
+               
+            </div>
+
+        </div>
+
+        <div class="auth-div-input div-input-pass">
+            <input class="auth-input input-password" type="password" formControlName="password" #password
+                placeholder="password">
+            <div class="error input-error">
+
+                @if(_password.hasError('required')){
+                    <span>{{errorMsg.Required}}</span>
+                }
+               
+            </div>
+        </div>
+
+        <div class="auth-div-input div-input-condition">
+            <label class="label-condition" for="input-condition">Accepter les <span class="i-condition">conditions</span> d'utilisation</label>
+            <input class="auth-input input-condition" type="checkbox" formControlName="condition" #condition>
+        </div>
+
+        <div class="auth-div-btn div-btn-connection">
+            <p class="zone-erreur">{{erreur}}</p>
+
+            <button class="btn1 auth-btn btn-signup" type="button" (click)="signUp()" [disabled]="signUpForm.invalid">
+                S'inscrire
+            </button>
+        </div>
+    </div>
+
+    <div class="auth-bottom sign-in-bottom">
+
+        <p class="ou">inscrivez-vous avec...</p>
+
+        <div class="auth-div-autre div-btn-autre-connection">
+            <button class="btn btn-telephone" type="button">telephone</button>
+            <button class="btn btn-whatsapps" type="button">whatsapps</button>
+        </div>
+
+    </div>
+
+    <div class="div-to-sign-in">
+        <p class="sign-in-msg">Vous avez deja un compte ?</p>
+
+        <button class="to-sign-in" (click)="toSignIn()"> Connetez-vous !</button>
+    </div>
+
+</section>
