@@ -1,0 +1,86 @@
+{
+    "01": {
+        "idContact": "01",
+        "dateCreation": "10/08/2023",
+        "nom": "Marc",
+        "prenom": "Saveur",
+        "niss": "075686564789",
+        "gsm": "6965688897",
+        "tel": "7676968968",
+        "mail": "Marc@hotmail.be",
+        "adresse": "",
+        "typeContact": "boss"
+    },
+    "02": {
+        "idContact": "02",
+        "dateCreation": "08/02/2018",
+        "nom": "Ross",
+        "prenom": "Banerai",
+        "niss": "075686564789",
+        "gsm": "6965688897",
+        "tel": "7676968968",
+        "mail": "Ross@hotmail.be",
+        "adresse": "",
+        "typeContact": "Soldat"
+    },
+    "03": {
+        "idContact": "03",
+        "dateCreation": "21/12/2009",
+        "nom": "Tenarei",
+        "prenom": "Williamson",
+        "niss": "075686564789",
+        "gsm": "6965688897",
+        "tel": "7676968968",
+        "mail": "Tenarei@hotmail.be",
+        "adresse": "",
+        "typeContact": "Sergent"
+    },
+    "04": {
+        "idContact": "04",
+        "dateCreation": "10/08/2023",
+        "nom": "Fill",
+        "prenom": "Right",
+        "niss": "075686564789",
+        "gsm": "6965688897",
+        "tel": "7676968968",
+        "mail": "Fill@hotmail.be",
+        "adresse": "",
+        "typeContact": "boss"
+    },
+    "05": {
+        "idContact": "05",
+        "dateCreation": "10/08/2023",
+        "nom": "Fill",
+        "prenom": "Right",
+        "niss": "075686564789",
+        "gsm": "6965688897",
+        "tel": "7676968968",
+        "mail": "Fill@hotmail.be",
+        "adresse": "",
+        "typeContact": "boss"
+    },
+    "06": {
+        "idContact": "06",
+        "dateCreation": "10/08/2023",
+        "nom": "Fill",
+        "prenom": "Right",
+        "niss": "075686564789",
+        "gsm": "6965688897",
+        "tel": "7676968968",
+        "mail": "Fill@hotmail.be",
+        "adresse": "",
+        "typeContact": "boss"
+    },
+    "07": {
+        "idContact": "07",
+        "dateCreation": "10/08/2023",
+        "nom": "Fill",
+        "prenom": "Right",
+        "niss": "075686564789",
+        "gsm": "6965688897",
+        "tel": "7676968968",
+        "mail": "Fill@hotmail.be",
+        "adresse": "",
+        "typeContact": "boss"
+    }
+}
